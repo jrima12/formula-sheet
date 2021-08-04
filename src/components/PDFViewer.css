@@ -1,0 +1,6 @@
+.pdfDisplay{
+    float:center;
+    margin: 2%;
+    z-index: 1;
+    position: relative;
+}

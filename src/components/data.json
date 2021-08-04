@@ -1,0 +1,58 @@
+[
+    {
+        "title": "Science",
+        "disciplines": [
+            {
+                "type": "Biology",
+                "courses": [
+                    {
+                        "name": "Bio",
+                        "pdfPath": "/pdf/Chempdf.pdf"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Technology",
+        "disciplines": [
+            {
+                "type": "Operating Systems",
+                "courses": [
+                    {
+                        "name": "OS",
+                        "pdfPath": "/pdf/Chempdf.pdf"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Engineering",
+        "disciplines": [
+            {
+                "type": "Electrical",
+                "courses": [
+                    {
+                        "name": "Elec",
+                        "pdfPath": "/pdf/Chempdf.pdf"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Math",
+        "disciplines": [
+            {
+                "type": "Calculus",
+                "courses": [
+                    {
+                        "name": "Calc",
+                        "pdfPath": "/pdf/Chempdf.pdf"
+                    }
+                ]
+            }
+        ]
+    }
+]

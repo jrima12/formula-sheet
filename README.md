@@ -1,3 +1,6 @@
+CURRENT ISSUES: PDF NOT DISPLAYING IN EITHER LOCAL HOST OR DEPLOYED HOST
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

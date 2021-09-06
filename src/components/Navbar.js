@@ -3,9 +3,12 @@ import React from 'react';
 import './Navbar.css';
 import * as ReactBootstrap from 'react-bootstrap';
 
-export default function Navbar({setCurrentCourse}) {
-    return (
-      <div className="Navbar">
+
+
+export default function Navbar({ setCurrentCourse }) {
+  return (
+    <div className="Navbar">
+      <div className="nav-menu">
         <div className="dropdown">
           <button className="dropbtn" onClick={() => setCurrentCourse("/pdf/About.pdf")}>Home</button>
         </div>
@@ -14,17 +17,17 @@ export default function Navbar({setCurrentCourse}) {
           <div className="dropdown-content">
             <div className="subject">
               <h1>Biology</h1>
-              
+
             </div>
             <div className="subject">
               <h1>Chemistry</h1>
-              <a onClick={() => setCurrentCourse( process.env.PUBLIC_URL + "/pdf/Chempdf.pdf")}>General Chemistry</a>
-              <a onClick={() => setCurrentCourse( process.env.PUBLIC_URL + "/pdf/Thermodynamics.pdf")}>Thermodynamics</a>
+              <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Chempdf.pdf")}>General Chemistry</a>
+              <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Thermodynamics.pdf")}>Thermodynamics</a>
             </div>
             <div className="subject">
               <h1>Physics</h1>
-              <a onClick={() => setCurrentCourse( process.env.PUBLIC_URL + "/pdf/Mechanics.pdf")}>Mechanics</a>
-              <a onClick={() => setCurrentCourse( process.env.PUBLIC_URL + "/pdf/Physicspdf.pdf")}>General Physics</a>
+              <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Mechanics.pdf")}>Mechanics</a>
+              <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Physcspdf.pdf")}>General Physics</a>
             </div>
             <div className="subject">
               <h1>Astronomy</h1>
@@ -32,7 +35,7 @@ export default function Navbar({setCurrentCourse}) {
             </div>
             <div className="subject">
               <h1>Computer</h1>
-          
+
             </div>
           </div>
         </div>
@@ -49,7 +52,7 @@ export default function Navbar({setCurrentCourse}) {
             </div>
             <div className="subject">
               <h1>Software</h1>
-              <a onClick={() => setCurrentCourse( process.env.PUBLIC_URL + "/pdf/MATLAB.pdf")}>MATLAB</a>
+              <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/MATLAB.pdf")}>MATLAB</a>
             </div>
           </div>
         </div>
@@ -58,17 +61,17 @@ export default function Navbar({setCurrentCourse}) {
           <div className="dropdown-content">
             <div className="subject">
               <h1>Chemical</h1>
-              <a onClick={() => setCurrentCourse( process.env.PUBLIC_URL + "/pdf/Chempdf.pdf")}>General Chemistry</a>
-              <a onClick={() => setCurrentCourse( process.env.PUBLIC_URL + "/pdf/Thermodynamics.pdf")}>Thermodynamics</a>
+              <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Chempdf.pdf")}>General Chemistry</a>
+              <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Thermodynamics.pdf")}>Thermodynamics</a>
             </div>
             <div className="subject">
               <h1>Electrical</h1>
-              <a onClick={() => setCurrentCourse( process.env.PUBLIC_URL + "/pdf/Math for EE.pdf")}>Math for EE</a>
-              <a onClick={() => setCurrentCourse( process.env.PUBLIC_URL + "/pdf/Electronic Circuits.pdf")}>Electronic Circuits</a>
+              <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Math for EE.pdf")}>Math for EE</a>
+              <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Electronic Circuits.pdf")}>Electronic Circuits</a>
             </div>
             <div className="subject">
               <h1>Mechanical</h1>
-              <a onClick={() => setCurrentCourse( process.env.PUBLIC_URL + "/pdf/Mechanics.pdf")}>Mechanics</a>              <a href="#">Link 2</a>
+              <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Mechanics.pdf")}>Mechanics</a>
             </div>
             <div className="subject">
               <h1>Computer</h1>
@@ -86,14 +89,30 @@ export default function Navbar({setCurrentCourse}) {
             </div>
             <div className="subject">
               <h1>Calculus</h1>
-              <a onClick={() => setCurrentCourse( "%PUBLIC_URL%/pdf/Differential Equations.pdf")}>Differential Equations</a>
+              <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Differential Equations.pdf")}>Differential Equations</a>
             </div>
             <div className="subject">
               <h1>Number Theory</h1>
-              <a onClick={() => setCurrentCourse('%PUBLIC_URL%/pdf/pdf/Probability and Statistics.pdf')}>Probability and Statistics</a>
+              <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + '/pdf/Probability and Statistics.pdf')}>Probability and Statistics</a>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  );
+}
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}

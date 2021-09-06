@@ -46,20 +46,20 @@ export default function PDFViewer({ currentCourse }) {
   return (
     <div className="pdfDisplay">
       <div className="navigation">
-        <button id="first" onClick={goToFirst}>First</button>
-        <button id="prev" onClick={goPrev}>previous</button>
-        <button id="ZoomOut" onClick={ZoomOut}>Zoom Out</button>
-        <button id="Rotate" onClick={rotatePage}>Rotate</button>
-        <button id="ZoomIn" onClick={ZoomIn}>Zoom In</button>
-        <button id="next" onClick={goNext}>Next</button>
-        <button id="last" onClick={goLast}>Last</button>
+        <h2 className="HeaderForControls">PDFs and Controls</h2>
+        <button className="controlButton" id="first" onClick={goToFirst}>First</button>
+        <button className="controlButton" id="prev" onClick={goPrev}>Previous</button>
+        <button className="controlButton" id="ZoomOut" onClick={ZoomOut}>Zoom Out</button>
+        <button className="controlButton" id="Rotate" onClick={rotatePage}>Rotate</button>
+        <button className="controlButton" id="ZoomIn" onClick={ZoomIn}>Zoom In</button>
+        <button className="controlButton" id="next" onClick={goNext}>Next</button>
+        <button className="controlButton" id="last" onClick={goLast}>Last</button>
       </div>
       <Document
         file={currentCourse}
         onLoadSuccess={onDocumentLoadSuccess}
         noData={"Select a PDF"}
         onLoadError={console.error}
-        onLoadSuccess={console.log("v3")}
       >
         <Page pageNumber={pageNumber}
           width={500}

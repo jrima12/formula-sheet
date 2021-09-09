@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 // import ReactDOM from 'react-dom';
 import './Navbar.css';
 import * as ReactBootstrap from 'react-bootstrap';
@@ -6,6 +6,21 @@ import * as ReactBootstrap from 'react-bootstrap';
 
 
 export default function Navbar({ setCurrentCourse }) {
+
+  useEffect(() => {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    
+    hamburger.addEventListener("click", mobileMenu);
+    navMenu.addEventListener("click", mobileMenu);
+    
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+    
+  }, []);
+
   return (
     <div className="Navbar">
       <div className="nav-menu">
@@ -98,7 +113,7 @@ export default function Navbar({ setCurrentCourse }) {
           </div>
         </div>
       </div>
-      <div class="hamburger">
+      <div className="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -107,12 +122,3 @@ export default function Navbar({ setCurrentCourse }) {
   );
 }
 
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", mobileMenu);
-
-function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-}

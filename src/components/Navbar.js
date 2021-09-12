@@ -9,14 +9,14 @@ export default function Navbar({ setCurrentCourse }) {
 
   useEffect(() => {
     const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-    
+    const NewMenu = document.querySelector(".NewMenu");
+
     hamburger.addEventListener("click", mobileMenu);
-    navMenu.addEventListener("click", mobileMenu);
+    NewMenu.addEventListener("click", mobileMenu);
     
     function mobileMenu() {
         hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
+        NewMenu.classList.toggle("active");
     }
     
   }, []);
@@ -29,11 +29,7 @@ export default function Navbar({ setCurrentCourse }) {
         </div>
         <div className="dropdown">
           <button className="dropbtn">Science</button>
-          <div className="dropdown-content">
-            <div className="subject">
-              <h1>Biology</h1>
-
-            </div>
+          <div className="dropdown-content" id="Science-Content">
             <div className="subject">
               <h1>Chemistry</h1>
               <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Chempdf.pdf")}>General Chemistry</a>
@@ -44,36 +40,20 @@ export default function Navbar({ setCurrentCourse }) {
               <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Mechanics.pdf")}>Mechanics</a>
               <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Physcspdf.pdf")}>General Physics</a>
             </div>
-            <div className="subject">
-              <h1>Astronomy</h1>
-
-            </div>
-            <div className="subject">
-              <h1>Computer</h1>
-
-            </div>
           </div>
         </div>
         <div className="dropdown">
           <button className="dropbtn">Technology</button>
-          <div className="dropdown-content">
+          <div className="dropdown-content" id="Technology-Content">
             <div className="subject">
-              <h1>Operating Systems</h1>
-
-            </div>
-            <div className="subject">
-              <h1>Programming Languages</h1>
-
-            </div>
-            <div className="subject">
-              <h1>Software</h1>
+              <h1>Programming</h1>
               <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/MATLAB.pdf")}>MATLAB</a>
             </div>
           </div>
         </div>
         <div className="dropdown">
           <button className="dropbtn">Engineering</button>
-          <div className="dropdown-content">
+          <div className="dropdown-content" id="Engineering-Content">
             <div className="subject">
               <h1>Chemical</h1>
               <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Chempdf.pdf")}>General Chemistry</a>
@@ -82,23 +62,17 @@ export default function Navbar({ setCurrentCourse }) {
             <div className="subject">
               <h1>Electrical</h1>
               <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Math for EE.pdf")}>Math for EE</a>
-              <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Electronic Circuits.pdf")}>Electronic Circuits</a>
+              <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Electronic Circuits.pdf")}>Circuits</a>
             </div>
             <div className="subject">
               <h1>Mechanical</h1>
               <a onClick={() => setCurrentCourse(process.env.PUBLIC_URL + "/pdf/Mechanics.pdf")}>Mechanics</a>
             </div>
-            <div className="subject">
-              <h1>Computer</h1>
-            </div>
-            <div className="subject">
-              <h1>Civil</h1>
-            </div>
           </div>
         </div>
         <div className="dropdown">
           <button className="dropbtn">Math</button>
-          <div className="dropdown-content">
+          <div className="dropdown-content" id="Math-Content">
             <div className="subject">
               <h1>Pure Math</h1>
             </div>
@@ -117,6 +91,57 @@ export default function Navbar({ setCurrentCourse }) {
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
+      </div>
+      <div className="NewMenu">
+        <h1 className="homebtn" onClick={() => setCurrentCourse("/pdf/About.pdf")}>HOME</h1>
+        <div className="category">
+          <h1 className="STEM">Science</h1>
+            <div className="STEM-content">
+              <h2 className="type" >Chemistry</h2>
+              <li className="classes" onClick={() => setCurrentCourse("/pdf/Chempdf.pdf")}>General Chemistry</li>
+              <li className="classes" onClick={() => setCurrentCourse("/pdf/Thermodynamics.pdf")}>Thermodynamics</li>
+            </div>
+            <div className="STEM-content">
+              <h2 className="type">Physics</h2>
+              <li className="classes" onClick={() => setCurrentCourse("/pdf/Mechanics.pdf")}>Mechanics</li>
+              <li className="classes" onClick={() => setCurrentCourse("/pdf/Physcspdf.pdf")}>General Physics</li>
+            </div>
+        </div>
+        <div className="category">
+          <h1 className="STEM">Technology</h1>
+            <div className="STEM-content">
+              <h2 className="type">Programming</h2>
+              <li className="classes" onClick={() => setCurrentCourse("/pdf/MATLAB.pdf")}>MATLAB</li>
+            </div>
+        </div>
+        <div className="category">
+          <h1 className="STEM">Engineering</h1>
+            <div className="STEM-content">
+              <h2 className="type">Chemical</h2>
+              <li className="classes" onClick={() => setCurrentCourse("/pdf/Chempdf.pdf")}>General Chemistry</li>
+              <li className="classes" onClick={() => setCurrentCourse("/pdf/Thermodynamics.pdf")}>Thermodynamics</li>
+            </div>
+            <div className="STEM-content">
+              <h2 className="type">Electrical</h2>
+              <li className="classes" onClick={() => setCurrentCourse("/pdf/Math for EE.pdf")}>Math for EE</li>
+              <li className="classes" onClick={() => setCurrentCourse("/pdf/Electronic Circuits.pdf")}>Circuits</li>
+            </div>
+            <div className="STEM-content">
+              <h2 className="type">Mechanical</h2>
+              <li className="classes" onClick={() => setCurrentCourse("/pdf/Mechanics.pdf")}>Mechanics</li>
+            </div>
+        </div>
+        <div className="category">
+          <h1 className="STEM">Math</h1>
+            <div className="STEM-content">
+              <h2 className="type">Calculus</h2>
+              <li className="classes" onClick={() => setCurrentCourse("/pdf/Differential Equations.pdf")}>Differential Equations</li>
+            </div>
+            <div className="STEM-content">
+              <h2 className="type">Number Theory</h2>
+              <li className="classes" onClick={() => setCurrentCourse("/pdf/Probability and Statistics.pdf")}>Probability and Statistics</li>
+            </div>
+        </div>
       </div>
     </div>
   );

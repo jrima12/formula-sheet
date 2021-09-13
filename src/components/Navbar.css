@@ -4,6 +4,7 @@
     height: 60px;
     width: 100vw;
     z-index: 2;
+    overflow-y: auto;
  }
 .NewMenu{
   display: none;
@@ -114,6 +115,7 @@ h1{
 @media only screen and (max-width: 768px) {
   .nav-menu{
     display: none;
+    overflow-y: auto;
   }
 
   .NewMenu{
@@ -127,16 +129,20 @@ h1{
       border: none;
       transition: 0.3s;
       z-index: 2;
+      overflow-y: auto;
       box-shadow:
           0 10px 27px rgba(0, 0, 0, 0.05);
   }
 
   .NewMenu.active {
     left: 0;
-    height: 100%;
+    overflow-y: auto;
+    height: 600px;
     text-align: left;
     padding: 0;
     margin: 0;
+    white-space: nowrap;
+    scroll-behavior: auto;
   }
 
   .category{

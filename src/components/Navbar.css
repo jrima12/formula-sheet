@@ -137,7 +137,7 @@ h1{
   .NewMenu.active {
     left: 0;
     overflow-y: auto;
-    height: 600px;
+    height: 100%;
     text-align: left;
     padding: 0;
     margin: 0;

@@ -1,11 +1,12 @@
- .Navbar{
+.Navbar{
     background-color: #414577;
     text-align: center;
     height: 60px;
     width: 100%;
     z-index: 2;
     overflow-y: auto;
- }
+}
+
 .NewMenu{
   display: none;
   background-color: #414577;
@@ -26,7 +27,7 @@
     font-size: 16px;
     border: none;
     height: 60px;
-    width: 20vw;
+    width: 15vw;
     text-align: center;
     display: inline-block;
   }
@@ -45,15 +46,15 @@
 
   #Science-Content{
     left: 0;
-    margin-left: 20vw;
+    margin-left: 20%;
   }
   #Technology-Content{
     left: 0;
-    margin-left: 40vw;
+    margin-left: 40%;
   }
   #Engineering-Content{
     right: 0;
-    margin-right: 20vw;
+    margin-right: 20%;
   }
   #Math-Content{
     right: 0;
@@ -116,6 +117,7 @@ h1{
   .nav-menu{
     display: none;
     overflow-y: auto;
+    width: 100%;
   }
 
   .NewMenu{
@@ -149,7 +151,7 @@ h1{
     display: table-row;
     margin:0;
     float: left;
-    width: 100vw;
+    width: 100%;
     text-align: left;
     padding-bottom: 40px;
   }
@@ -168,7 +170,7 @@ h1{
   .NewMenu h1{
     color: rgb(122, 122, 122);
     text-decoration: none;
-    width: 100vw;
+    width: 100%;
     font-size: 30px;
     padding: 3px 10px;
     float: left;

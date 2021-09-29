@@ -25,7 +25,7 @@ export default function Navbar({ setCurrentCourse }) {
     <div className="Navbar">
       <div className="nav-menu">
         <div className="dropdown">
-          <button className="dropbtn" onClick={() => setCurrentCourse("/pdf/About.pdf")}>Home</button>
+          <button className="dropbtn" onClick={() => setCurrentCourse("/pdf/About.pdf", "About")}>Home</button>
         </div>
         {data.map((sheetlist) => {
           return (

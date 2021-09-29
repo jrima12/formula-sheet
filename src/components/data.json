@@ -1,55 +1,144 @@
 [
     {
-        "title": "Science",
-        "disciplines": [
+        "title" : "Science",
+        "type": [
             {
-                "type": "Biology",
-                "courses": [
+                "Category" : "Chemistry",
+                "Classes" : [
                     {
-                        "name": "Bio",
-                        "pdfPath": "/pdf/Chempdf.pdf"
+                        "name": "General Chemistry",
+                        "pdfpath" : "/pdf/Chempdf.pdf"
+                    },
+                    {
+                        "name": "Thermodynamics",
+                        "pdfpath" : "/pdf/Thermodynamics.pdf"
+                    }
+                ]
+            },
+            {
+                "Category" : "Physics",
+                "Classes" : [
+                    {
+                        "name": "Electricity and Magnetism",
+                        "pdfpath" : "/pdf/Electricity-and-Magnetism.pdf"
+                    },
+                    {
+                        "name": "General Physics",
+                        "pdfpath" : "/pdf/Physcspdf.pdf"
+                    },
+                    {
+                        "name": "Mechanics",
+                        "pdfpath" : "/pdf/Mechanics.pdf"
                     }
                 ]
             }
         ]
     },
     {
-        "title": "Technology",
-        "disciplines": [
+        "title" : "Technology",
+        "type": [
             {
-                "type": "Operating Systems",
-                "courses": [
+                "Category" : "Programming",
+                "Classes" : [
                     {
-                        "name": "OS",
-                        "pdfPath": "/pdf/Chempdf.pdf"
+                        "name": "ARM Assembly",
+                        "pdfpath" : "/pdf/Arm-Assembly.pdf"
+                    },
+                    {
+                        "name": "C++",
+                        "pdfpath" : "/pdf/Cpp.pdf"
+                    },
+                    {
+                        "name": "MATLAB",
+                        "pdfpath" : "/pdf/MATLAB.pdf"
+                    },
+                    {
+                        "name": "Python",
+                        "pdfpath" : "/pdf/Python.pdf"
+                    }
+                ]
+            },
+            {
+                "Category" : "Software",
+                "Classes" : [
+                    {
+                        "name": "Solidworks",
+                        "pdfpath" : "/pdf/Solidworks.pdf"
                     }
                 ]
             }
         ]
     },
     {
-        "title": "Engineering",
-        "disciplines": [
+        "title" : "Engineering",
+        "type": [
             {
-                "type": "Electrical",
-                "courses": [
+                "Category" : "Chemical",
+                "Classes" : [
                     {
-                        "name": "Elec",
-                        "pdfPath": "/pdf/Chempdf.pdf"
+                        "name": "General Chemistry",
+                        "pdfpath" : "/pdf/Chempdf.pdf"
+                    },
+                    {
+                        "name": "Thermodynamics",
+                        "pdfpath" : "/pdf/Thermodynamics.pdf"
+                    }
+                ]
+            },
+            {
+                "Category" : "Electrical",
+                "Classes" : [
+                    {
+                        "name": "Circuits",
+                        "pdfpath" : "/pdf/Electronic Circuits.pdf"
+                    },
+                    {
+                        "name": "Math for E.E.",
+                        "pdfpath" : "/pdf/Math for EE.pdf"
+                    },
+                    {
+                        "name": "Signals and Systems",
+                        "pdfpath" : "/pdf/Signals And Systems.pdf"
+                    }
+                ]
+            },
+            {
+                "Category" : "Mechanical",
+                "Classes" : [
+                    {
+                        "name": "Mechanics",
+                        "pdfpath" : "/pdf/Mechanics.pdf"
                     }
                 ]
             }
         ]
     },
     {
-        "title": "Math",
-        "disciplines": [
+        "title" : "Math",
+        "type": [
             {
-                "type": "Calculus",
-                "courses": [
+                "Category" : "Calculus",
+                "Classes" : [
                     {
-                        "name": "Calc",
-                        "pdfPath": "/pdf/Chempdf.pdf"
+                        "name": "Calculus I & II",
+                        "pdfpath" : "/pdf/Diff-Int-calc.pdf"
+                    },
+                    {
+                        "name": "Differential Equations",
+                        "pdfpath" : "/pdf/Differential Equations.pdf"
+                    }
+                ]
+            },
+            {
+                "Category" : "Number Theory",
+                "Classes" : [
+                    {
+                        "name": "Discrete Math",
+                        "pdfpath" : "/pdf/Discrete-Math.pdf"
+                    },
+                    {
+                        "name": "Probability and Statistics",
+                        "pdfpath" : "/pdf/Probability and Statistics.pdf"
                     }
                 ]
             }

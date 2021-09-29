@@ -2,7 +2,7 @@
     background-color: #414577;
     text-align: center;
     height: 60px;
-    width: 100vw;
+    width: 100%;
     z-index: 2;
     overflow-y: auto;
  }
